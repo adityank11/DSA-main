@@ -5,11 +5,6 @@ using namespace std;
 
 vector<vector<int>> rotate_matrix (vector<vector<int>> matrix)
 {
-    //reverse
-    for (int i = 0; i < matrix.size(); i++)
-    {
-         reverse(matrix[i].begin(),matrix[i].end());
-    }
     //transpose
     for (int i = 0; i < matrix.size(); i++)
     {
@@ -17,6 +12,11 @@ vector<vector<int>> rotate_matrix (vector<vector<int>> matrix)
         {
            swap(matrix[i][j],matrix[j][i]);
         }
+    }
+    //reverse
+    for (int i = 0; i < matrix.size(); i++)
+    {
+        reverse(matrix[i].begin(),matrix[i].end());
     }
   return matrix;
 }
