@@ -23,12 +23,12 @@ class Stack
     }
     bool isFull()
     {
-        if(top>max) return true;
+        if(top>=max-1) return true;
         else return false;
     }
     void push(int element)
     {
-       if(top<=max)
+       if(top<max-1)
        {
          top++;
          arr[top] = element;
@@ -72,6 +72,7 @@ int main()
     st.push(6);
     st.push(7);
     st.push(8);
+    st.push(9);
     st.print();
     return 0;
 }
